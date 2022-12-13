@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="theme.css">
+<script src="function.js"></script>
+<title>Items App</title>
+</head>
+<body>
+  <h1>Gifts card</h1>
+  <br>
+    <div>
+      <h2>Add new gift card</h2>
+    </div>
+    <div>
+      <label for="name" class="labels">Name: </label>
+      <input type="text" id="name" class="textinput" placeholder="Enter name (required)">
+      <span style="margin-left: 20px;"></span>
+      <label for="code" class="labels">voucher code: </label>
+      <input type="text" id="code" class="textinput" placeholder="Enter code (redeem)">
+      <label for="expire" class="labels">expire: </label>
+      <input type="date" id="expire" class="date" placeholder="Select expire date">
+    </div>
+  <br>
+  <div id="table-wrapper">
+  <table id="data-table">
+  <thead>
+  <tr>
+  <th>Voucher</th>
+  <th class="t-code">Code</th>
+    <th class="t-exp">Expires</th>
+  <th class="t-radio">Select</th>
+  </tr>
+  </thead>
+  <tbody></tbody>
+  </table>
+  </div>
+  <br><br>
+  <div>
+  <button type="button" class="buttons" onclick="addData()" title="Add new row from the text inputs">Add</button>
+  <button type="button" class="buttons" onclick="updateData()" title="Update selected row">Update</button>
+  <button type="button" class="buttons" onclick="deleteData()" title="Delete selected row">Delete</button>
+  <span style="margin-left: 10px;"></span>
+  <button type="button" class="buttons" onclick="clearData()" title="Clear selection">Clear</button>
+  <button type="button" class="buttons" onclick="selectFirstOrLastRow(1)" title="Select first row of table">First</button>
+  <button type="button" class="buttons" onclick="selectFirstOrLastRow()" title="Select last row of table">Last</button>
+  </div>
+  <br><br>
+  <div id="status-wrapper">
+  <span class="labels">Status: </span>
+  <span id="status"></span>
+  </div>
+  </body>
+</html>
